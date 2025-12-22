@@ -21,7 +21,7 @@ body {
 }
 
 .main-title {
-    color: #333;
+    color: #2230f0;
     text-align: center;
     padding: 20px;
 }
@@ -30,4 +30,15 @@ header, footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    margin: 20px;
+    border-radius: 5px;
+}
+.main-content-text {
+    color: #666;
+    line-height: 1.6;
 }
