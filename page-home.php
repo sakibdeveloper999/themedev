@@ -2,7 +2,13 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <h1>Blog</h1>
+                    <section class="hero">
+                        Hero
+                    </section>
+                    <section class="services">
+                        Services
+                    </section>
+                    <section class="home-blog">
                         <div class="container">
                             <div class="blog-item">
                           <?php 
@@ -25,6 +31,7 @@
                         <?php endif ?>
                             </div>
                         </div>
+                    </section>
                 </main>
             </div>
         </div>
