@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: General Template
-*/ 
-
-?>
 <?php get_header(); ?>
   <!-- // Display custom header image -->
 <img src="<?php header_image(); ?>" 
@@ -15,20 +9,19 @@ Template Name: General Template
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
                         <div class="container">
-                            <div class="general-template">
-                          <?php 
-                         if(have_posts( )):
-                            while(have_posts( )):the_post(  );
+                            <div class="page-item">
+                          <?php
+                            while(have_posts(  )):the_post(  );
                         ?>
                         <article>
-                            <h1><?php the_title() ?></h1>
+                            <header>
+                                <h2><?php the_title() ?></h2>
+                            </header>
                             <?php the_content(); ?>
                         </article>
                         <?php endwhile;
-                         else: ?> 
-                         <p>Nothing yet to be displayed!</p>
-                        <?php endif ?>
-                            </div>
+                         ?> 
+                          </div>
                         </div>
                 </main>
             </div>
