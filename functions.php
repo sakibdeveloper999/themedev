@@ -29,6 +29,12 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
         ) ;
         add_theme_support( 'custom-header', $args );
         add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'custom-logo', array(
+            'width' => 200,
+            'height' => 100,
+            'flex-width' => true,
+            'flex-height' => true,
+        ) );
     }
     add_action( 'after_setup_theme', 'themeDev_config',0 );
 

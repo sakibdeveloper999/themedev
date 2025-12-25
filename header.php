@@ -12,8 +12,16 @@
             <section class="top-bar">
                 <div class="container">
                 <div class="logo">
-                    Logo
-                </div>
+                 <div class="logo">
+                    <?php if ( has_custom_logo() ) : ?>
+                     <?php the_custom_logo(); ?>
+                      <?php else : ?>
+                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                           <span><?php echo get_bloginfo( 'name' ); ?></span>
+                         </a>
+                      <?php endif; ?>
+                 </div>
+
                 <div class="searchbox">
                     Search
                 </div>
