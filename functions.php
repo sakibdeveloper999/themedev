@@ -28,6 +28,7 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
             'width'=> 1920,
         ) ;
         add_theme_support( 'custom-header', $args );
+        add_theme_support( 'post-thumbnails' );
     }
     add_action( 'after_setup_theme', 'themeDev_config',0 );
 
