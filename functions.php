@@ -2,20 +2,18 @@
 
 // Enqueueing styles and scripts
 function themeDev_enqueueing() {
-    // link to stylesheet
+    // enqueue to link stylesheet
     wp_enqueue_style( 'main-stylesheet', get_stylesheet_uri(), array(), filemtime(get_template_directory().'/style.css'), 'all');
-    // link to javascript file
+    // enqueue to link  javascript file
     wp_enqueue_script('dropdown' , get_template_directory_uri(). '/js/dropdown.js', array(),'1.0', true );
-    // link to Google Fonts
+    // enqueue to link Google Fonts
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap', array(), null, 'all');
 }
 add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
 
-// Registering navigation menu
-
-
-
+        // Theme Configuration
     function themeDev_config(){
+        // Register Navigation Menu
         register_nav_menus(
          array(
         'themeDav-main-menu'=> 'Main Menu',
@@ -23,18 +21,21 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
         'themeDav-social-menu'=> 'Social Menu',
        )
         );
-        $args = array(
+        // Adding theme supports for custom header.
+        add_theme_support( 'custom-header', array(
             'height'=> 250,
             'width'=> 1920,
-        ) ;
-        add_theme_support( 'custom-header', $args );
+        ));
+
+        // Adding theme supports for  post thumbnails.
         add_theme_support( 'post-thumbnails' );
+        // Adding theme supports for custom logo.
         add_theme_support( 'custom-logo', array(
             'width' => 200,
             'height' => 100,
             'flex-width' => true,
             'flex-height' => true,
-        ) );
+        ));
     }
     add_action( 'after_setup_theme', 'themeDev_config',0 );
 
