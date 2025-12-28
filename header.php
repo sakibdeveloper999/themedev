@@ -12,7 +12,6 @@
             <section class="top-bar">
                 <div class="container">
                 <div class="logo">
-                 <div class="logo">
                     <?php if ( has_custom_logo() ) : ?>
                      <?php the_custom_logo(); ?>
                       <?php else : ?>
