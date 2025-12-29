@@ -39,6 +39,21 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
     }
     add_action( 'after_setup_theme', 'themeDev_config',0 );
 
+
+    function themeDev_sidebars(){
+        register_sidebar( array(
+            'name'          => 'Blog Sidebar',
+            'id'            => 'sidebar-blog',
+            'description'   => 'This is the Blog Sidebar. You can add your widgets here.',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
+    }
+
+    add_action( 'widgets_init', 'themeDev_sidebars');
+
 // // Adding theme support
 // function themeDev_theme_support() {
 //     // Featured image support
