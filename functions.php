@@ -39,12 +39,41 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
     }
     add_action( 'after_setup_theme', 'themeDev_config',0 );
 
-
+    // Register Sidebar
     function themeDev_sidebars(){
+        // Blog Sidebar
         register_sidebar( array(
             'name'          => 'Blog Sidebar',
             'id'            => 'sidebar-blog',
             'description'   => 'This is the Blog Sidebar. You can add your widgets here.',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
+        
+        register_sidebar( array(
+            'name'          => 'Service 1',
+            'id'            => 'service-1',
+            'description'   => 'This is the First Service Area.',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+            'name'          => 'Service 2',
+            'id'            => 'service-2',
+            'description'   => 'This is the 2nd Service Area.',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+            'name'          => 'Service 3',
+            'id'            => 'service-3',
+            'description'   => 'This is the 3th Service Area.',
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="widget-title">',
