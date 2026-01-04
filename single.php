@@ -20,7 +20,13 @@
                 <?php the_content(); ?>
             </div>
          </article>
-         <?php endwhile ?>
+         <?php 
+         if( comments_open() || get_comments_number() ){
+             comments_template();
+         }
+         ?>
+         <?php
+        endwhile; ?>
      </div>
     </div>
 </div>
