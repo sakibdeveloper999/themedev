@@ -31,7 +31,9 @@
                         </div>
                     </article>
 
-                <?php endwhile; ?>
+                <?php endwhile; 
+                 the_posts_pagination(  );
+                ?>
             <?php else : ?>
                 <p class="no-posts">Nothing yet to be displayed!</p>
             <?php endif; ?>
