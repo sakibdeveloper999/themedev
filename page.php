@@ -12,7 +12,7 @@
                             <div class="page-item">
                           <?php
                             while(have_posts(  )):the_post(  );
-                          // Content from part/content.php 
+                          // Content from part/content-php.php 
                           get_template_part( 'part/content', 'page' );
                           endwhile;
                          ?> 

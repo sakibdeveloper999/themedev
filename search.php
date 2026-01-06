@@ -8,8 +8,8 @@
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); 
 
-                   // Content from part/content.php
-                    get_template_part( 'part/content' );
+                   // Content from part/content-search.php
+                    get_template_part( 'part/content', 'search' );
 
                 endwhile;  
                  the_posts_pagination(  );

@@ -22,9 +22,9 @@
                          if(have_posts(  )):
                             while(have_posts(  )):the_post(  );
 
-                            // Content from part/content.php 
+                            // Content from part/content-archive.php 
                             get_template_part( 'part/content', 'archive' );
-                            
+
                          endwhile;?>
                         <!--  Pagination -->
                         <div class="wpdevs-pagination">
