@@ -6,11 +6,16 @@
                         <header class="page-header">
                             <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'themedev' ); ?></h1>
                         </header><!-- .page-header -->
-
-                        <div class="page-content">
-                            <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'themedev' ); ?></p>
-
+                        <div class="error">
+                            <p>How about doing a search?</p>
                             <?php get_search_form(); ?>
+                            <?php 
+                            the_widget( 'WP_Widget_Recent_Posts',
+                             array(
+                                'title' => 'Recent Posts',
+                                'number' => 3,
+                             ) );
+                             ?>
                         </div><!-- .page-content -->
                     </section><!-- .error-404 -->
                 </main><!-- #main -->
