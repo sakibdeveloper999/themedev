@@ -9,8 +9,13 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
+
+                    <!-- Archive Title  -->
                     <?php the_archive_title( '<h1 class="archive-title">', '</h1>' ) ?>
+                    <!-- Archive Description -->
                     <?php the_archive_description( '<div class="archive-description">', '</div>' ) ?>
+                    
+                         <!-- Container Start -->
                         <div class="container">
                             <div class="archive-item">
                           <?php 
