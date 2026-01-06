@@ -16,7 +16,7 @@
                          if(have_posts(  )):
                             while(have_posts(  )):the_post(  );
                         ?>
-
+                        <!-- content -->
                         <article>
                             <a href="<?php the_permalink(  ); ?>"><h2><?php the_title() ?></h2></a>
                             <a href="<?php the_permalink(  ); ?>"><?php the_post_thumbnail(array(275,275)); ?></a>
@@ -28,6 +28,7 @@
                             <?php the_excerpt(); ?>
                         </article>
                         <?php endwhile;?>
+                        <!--  Pagination -->
                         <div class="wpdevs-pagination">
                          <div class="pages new">
                            <?php previous_posts_link('<< Newer posts'); ?>
@@ -36,6 +37,7 @@
                           <?php next_posts_link('Older posts >>'); ?>
                           </div>
                         </div>
+                        <!--  Pagination -->
                         <?php else: ?> 
                          <p>Nothing yet to be displayed!</p>
                         <?php endif ?>
