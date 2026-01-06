@@ -14,26 +14,18 @@
                     <?php the_archive_title( '<h1 class="archive-title">', '</h1>' ) ?>
                     <!-- Archive Description -->
                     <?php the_archive_description( '<div class="archive-description">', '</div>' ) ?>
-                    
+
                          <!-- Container Start -->
                         <div class="container">
                             <div class="archive-item">
                           <?php 
                          if(have_posts(  )):
                             while(have_posts(  )):the_post(  );
-                        ?>
-                        <!-- content -->
-                        <article>
-                            <a href="<?php the_permalink(  ); ?>"><h2><?php the_title() ?></h2></a>
-                            <a href="<?php the_permalink(  ); ?>"><?php the_post_thumbnail(array(275,275)); ?></a>
-                            <div class="meta-info">
-                                <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link( ); ?> </p>
-                                <p>Categories: <?php the_category(', '); ?></p>
-                                <p>Tags: <?php the_tags( '', ', ', '' ) ?></p>
-                            </div>
-                            <?php the_excerpt(); ?>
-                        </article>
-                        <?php endwhile;?>
+
+                            // Content from part/content.php 
+                            get_template_part( 'part/content', 'archive' );
+                            
+                         endwhile;?>
                         <!--  Pagination -->
                         <div class="wpdevs-pagination">
                          <div class="pages new">
