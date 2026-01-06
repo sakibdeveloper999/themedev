@@ -6,32 +6,12 @@
             <h1>Search results for: <?php echo get_search_query(); ?></h1>
         <?php get_search_form(); ?>
             <?php if ( have_posts() ) : ?>
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                        <header>
-                            <h2>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
-                            </h2>
-                            <?php if('post' == get_post_type(  )): ?>
-                            <div class="meta-info">
-                                <p>
-                                    Posted on <?php echo get_the_date(); ?>
-                                    by <?php the_author_posts_link(); ?>
-                                </p>
-                                <p>Categories: <?php the_category(', '); ?></p>
-                                <p>Tags: <?php the_tags('', ', ', ''); ?></p>
-                            </div>
-                            <?php endif; ?>
-                        </header>
+                <?php while ( have_posts() ) : the_post(); 
 
-                        <div class="content">
-                            <?php the_excerpt(); ?>
-                        </div>
-                    </article>
+                   // Content from part/content.php
+                    get_template_part( 'part/content' );
 
-                <?php endwhile; 
+                endwhile;  
                  the_posts_pagination(  );
                 ?>
             <?php else : ?>
