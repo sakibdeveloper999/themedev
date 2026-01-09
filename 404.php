@@ -8,12 +8,20 @@
                         </header><!-- .page-header -->
                         <div class="error">
                             <p>How about doing a search?</p>
+
                             <?php get_search_form(); ?>
                             <?php 
                             the_widget( 'WP_Widget_Recent_Posts',
                              array(
                                 'title' => 'Recent Posts',
                                 'number' => 3,
+                             ) );
+                            the_widget( 'WP_Widget_Categories',
+                             array(
+                                'title' => 'Categories',
+                                'count' => 1,
+                                'hierarchical' => 1,
+                                'dropdown' => 0,
                              ) );
                              ?>
                         </div><!-- .page-content -->
