@@ -1,5 +1,9 @@
 <?php 
 
+
+// Including customizer file
+require get_template_directory() . '/inc/customizer.php';
+
 // Enqueueing styles and scripts
 function themeDev_enqueueing() {
     // enqueue to link stylesheet
