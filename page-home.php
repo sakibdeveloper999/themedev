@@ -3,12 +3,7 @@
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
                     <section class="hero">
-                        <?php 
-                          if(is_active_sidebar( 'hero-items' )){
-                            dynamic_sidebar( 'hero-items' );
-                          }
-                        ?>
-
+                      
                     </section>
                     <section class="services">
                         <h2>Services</h2>

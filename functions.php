@@ -46,16 +46,6 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
 
     // Register Sidebar
     function themeDev_sidebars(){
-        // Home Hero Sidebar
-        register_sidebar( array(
-            'name'          => 'Home Hero',
-            'id'            => 'hero-items',
-            'description'   => 'This is the Home Hero Area. You can add your widgets here.',
-            'before_widget' => '<div class="widget-wrapper">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h2 class="hero-title">',
-            'after_title'   => '</h2>',
-        ) );
         // Blog Sidebar
         register_sidebar( array(
             'name'          => 'Blog Sidebar',

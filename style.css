@@ -678,20 +678,6 @@ img {
     background: var( --wpdevs-yellow );
     transition: .5s all;
 }
-.hero-title{
-    color: #000;
-    margin-bottom: 30px;
-}
-#home-hero .widget-wrapper{
-    width: 100%;
-}
-@media (max-width: 768px) {
-    .hero .hero-items h1{
-        font-size: 36px;
-        line-height: 3.6rem;
-    }
-}
-
 /* Services */
 .services{ 
     background: var( --wpdevs-deep-blue ); 
