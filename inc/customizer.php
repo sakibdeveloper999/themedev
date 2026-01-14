@@ -12,7 +12,7 @@ function themeDav_customizer($wp_customize){
                 $wp_customize -> add_setting(
                     'set_copyright', array(
                         'type'      => 'theme_mod',
-                        'default' => 'Copyright © 2024 Your Company. All rights reserved.',
+                        'default' => 'Copyright © 2026 Your Company. All rights reserved.',
                         'sanitize_callback' => 'sanitize_text_field',
                     )
                 );
