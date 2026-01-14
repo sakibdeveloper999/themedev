@@ -8,7 +8,6 @@ function themeDav_customizer($wp_customize){
             'description'   => 'Customize copyright information',
         )
     );
-
                 $wp_customize -> add_setting(
                     'set_copyright', array(
                         'type'      => 'theme_mod',

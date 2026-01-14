@@ -2,8 +2,16 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <section class="hero">
-                      
+                    <section class="hero" style="background-image: url('http://themedev.local/wp-content/uploads/2026/01/pexels-quang-nguyen-vinh-222549-2563129-scaled.jpg');">
+                      <div class="overlay" style="min-height:800px" >
+                        <div class="container">
+                          <div class="hero-items">
+                            <h1>Lorem ipsum dolor </h1>
+                            <p>sit amet consectetur adipisicing elit. Ipsam rem, consequuntur possimus, debitis perspiciatis.</p>
+                            <a href="#">Learn More</a>
+                          </div>
+                        </div>
+                      </div>
                     </section>
                     <section class="services">
                         <h2>Services</h2>
