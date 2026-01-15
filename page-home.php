@@ -10,18 +10,30 @@
                     $hero_height = get_theme_mod( 'set_hero_height', 800);
                     $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' ) );
                    ?>
-                    <section class="hero" style="background-image: url('<?php echo esc_url( $hero_background ); ?>');">
-                      <div class="overlay" style="min-height:<?php echo esc_attr( $hero_height ); ?>px" >
-                        <div class="container">
-                          <div class="hero-items">
-                            <h1><?php echo esc_html( $hero_title ); ?></h1>
-                            <p><?php echo esc_html( $hero_subtitle ); ?></p>
-                            <a href="<?php echo esc_url( $hero_button_link ); ?>"><?php echo esc_html( $hero_button_text ); ?></a>
+                      <section class="hero"
+                          style="
+                              background-image: url('<?php echo esc_url( $hero_background ); ?>');
+                              min-height: <?php echo esc_attr( $hero_height ); ?>px;
+                          "
+                      >
+                          <div class="overlay">
+                              <div class="container">
+                                  <div class="hero-items">
+                                      <h1><?php echo esc_html( $hero_title ); ?></h1>
+
+                                      <div class="hero-divider"></div>
+
+                                      <p><?php echo esc_html( $hero_subtitle ); ?></p>
+
+                                      <a href="<?php echo esc_url( $hero_button_link ); ?>">
+                                          <?php echo esc_html( $hero_button_text ); ?>
+                                      </a>
+                                  </div>
+                              </div>
                           </div>
-                        </div>
-                      </div>
-                    </section>
-                    
+                      </section>
+
+
                     <section class="services">
                         <h2>Services</h2>
                         <div class="container">
