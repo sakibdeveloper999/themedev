@@ -64,12 +64,14 @@
                         <h2>Latest Blog Posts</h2>
                         <div class="container">
                           <?php 
-
+                          $per_page= get_theme_mod( 'set_per_page', 3 );
+                          $category_include = get_theme_mod( 'set_category_include', '' );
+                            $category_exclude = get_theme_mod( 'set_category_exclude', '' );
                           $args = array(
                             'post_type'        => 'post',
-                            'post_per_page'    => 5,
-                            'category__in'     => array(24, 18, 19, 9,4),
-                            'category__not_in' => array(1),
+                            'post_per_page'    => $per_page,
+                            'category__in'     => explode(',', $category_include),
+                            'category__not_in' => explode(',', $category_exclude),
                           );
 
                           $postlist = new WP_Query( $args );
