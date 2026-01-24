@@ -26,12 +26,12 @@ if (!$q->have_posts()) return;
 
                     <div class="testimonial-client">
                         <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?= esc_url(get_the_post_thumbnail_url(get_the_ID(), 'thumbnail')) ?>" alt="<?= esc_attr(get_the_title()) ?>">
+                            <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'thumbnail')); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
                         <?php endif; ?>
 
                         <div>
-                            <h4><?= esc_html(get_the_title()) ?></h4>
-                            <span><?= esc_html(trim("$role $company")) ?></span>
+                            <h4><?php echo esc_html(get_the_title()); ?></h4>
+                            <span><?php echo esc_html(trim("$role $company")); ?></span>
                         </div>
                     </div>
 

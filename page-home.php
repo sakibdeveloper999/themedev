@@ -119,8 +119,9 @@
                         <?php endif ?>
                         </div>
                     </section>
-                    <section class="home-testimonials">
-                        <div class="container">
+                    <section class="testimonials-section">
+                        <h2>Testimonials</h2>
+                        <div class="">
                             <?php get_template_part( 'part/section', 'testimonials' ); ?>
                         </div>
                     </section>
