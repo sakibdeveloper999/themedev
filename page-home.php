@@ -32,8 +32,40 @@
                               </div>
                           </div>
                       </section>
-
-
+                      <section>
+                        <?php
+                        // Services 
+                                                
+                          // Service Customizer
+                          $service_title_1 = get_theme_mod( 'set_service_1_title', 'Please, add some title' );
+                          $service_title_2 = get_theme_mod( 'set_service_2_title', 'Please, add some title' );
+                          $service_title_3 = get_theme_mod( 'set_service_3_title', 'Please, add some title' );
+                          $service_1_image = wp_get_attachment_url( get_theme_mod( 'set_service_1_image' ) );
+                          $service_2_image = wp_get_attachment_url( get_theme_mod( 'set_service_2_image' ) );
+                          $service_3_image = wp_get_attachment_url( get_theme_mod( 'set_service_3_image' ) );
+                          $service_1_paragraph = get_theme_mod( 'set_service_1_paragraph', 'Please, add some paragraph' );
+                          $service_2_paragraph = get_theme_mod( 'set_service_2_paragraph', 'Please, add some paragraph' );
+                          $service_3_paragraph = get_theme_mod( 'set_service_3_paragraph', 'Please, add some paragraph' );
+                         ?>
+                         <h2 class="services-title">Services</h2>
+                         <div class="services-divider"></div>
+                          <div class="container services-customizer">
+                              <div class="services-items">
+                                  <img class="services-image" src="<?php echo esc_url( $service_1_image ); ?>" alt="">
+                                  <h3 class="services-title"><?php echo esc_html( $service_title_1 ); ?></h3>
+                                  <p class="services-paragraph"><?php echo esc_html( $service_1_paragraph ); ?></p>
+                              </div>
+                              <div class="services-items">
+                                  <img class="services-image" src="<?php echo esc_url( $service_2_image ); ?>" alt="">
+                                  <h3 class="services-title"><?php echo esc_html( $service_title_2 ); ?></h3>
+                                  <p class="services-paragraph"><?php echo esc_html( $service_2_paragraph ); ?></p>
+                              </div>
+                              <div class="services-items">
+                                  <img class="services-image" src="<?php echo esc_url( $service_3_image ); ?>" alt="">
+                                  <h3 class="services-title"><?php echo esc_html( $service_title_3 ); ?></h3>
+                                  <p class="services-paragraph"><?php echo esc_html( $service_3_paragraph ); ?></p>
+                              </div>
+                      </section>
                     <section class="services">
                         <h2>Services</h2>
                         <div class="container">

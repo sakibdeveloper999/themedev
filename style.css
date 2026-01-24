@@ -1063,3 +1063,65 @@ article.post h5{
 .nav-links .prev{
     padding-left: 0;
 }
+/* =======Services========== */
+/* Services Section */
+.services-customizer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* | | | */
+    gap: 24px;
+    padding: 40px 0;
+}
+
+.services-items {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-items:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.services-image {
+    width: 700px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.services-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+.services-divider {
+    display: block;
+    width: 128px;
+    height: 3px;
+    margin: 12px auto; /* centers horizontally + adds spacing */
+    background: linear-gradient(to left, transparent, #4f46e5);
+}
+
+
+.services-paragraph {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .services-customizer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .services-customizer {
+        grid-template-columns: 1fr;
+    }
+}

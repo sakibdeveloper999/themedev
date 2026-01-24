@@ -188,6 +188,190 @@ function themeDav_customizer($wp_customize){
                     'section' => 'sec_blog',
                     'type' => 'text'
             ) );
-}                                       
 
-add_action( 'customize_register', 'themeDav_customizer' );
+           // ===============
+           // End Blog
+           // ==============
+
+           // Service Section
+           	
+	$wp_customize->add_section( 
+        'sec_services', 
+        array(
+		    'title' => 'Services Section'
+	) );
+
+                //==================
+                // Service 1 Title
+                //==================
+
+
+                $wp_customize->add_setting(
+                    'set_service_1_title',
+                    array(
+                        'type' => 'theme_mod',
+                        'default' => 'Service 1',
+                        'sanitize_callback' => 'sanitize_text_field'
+                ) );
+                $wp_customize->add_control(
+                    'set_service_1_title',
+                    array(
+                        'label' => 'Service 1 Title',
+                        'description' => 'Enter title for Service 1',
+                        'section' => 'sec_services',
+                        'type' => 'text'
+                ) );
+                // Service image upload can be done via widget area
+                $wp_customize->add_setting(
+                    'set_service_1_image',
+                    array(
+                        'type' => 'theme_mod',
+                        'sanitize_callback' => 'absint'
+                ) );
+                $wp_customize->add_control( new WP_Customize_Media_Control(
+                    $wp_customize,
+                    'set_service_1_image',
+                    array(
+                        'label'      => 'Service 1 Image',
+                        'description' => 'Upload image for Service 1',
+                        'section'    => 'sec_services',
+                        'mime_type'  => 'image',
+                    )
+                )
+                );
+                // Service Section paragraph 1
+                $wp_customize->add_setting(
+                    'set_services_1_paragraph',
+                    array(
+                        'type' => 'theme_mod',
+                        'default' => 'Add your services on 1 description here.',
+                        'sanitize_callback' => 'sanitize_textarea_field'
+                ) );
+                $wp_customize->add_control(
+                    'set_services_1_paragraph',
+                    array(
+                        'label' => 'Service 1 Description',
+                        'description' => 'Enter description for Service 1',
+                        'section' => 'sec_services',
+                        'type' => 'textarea'
+                ) );
+
+
+
+
+        //==================
+        // Service 2 Title
+        //==================
+
+
+        $wp_customize->add_setting(
+            'set_service_2_title',
+            array(
+                'type' => 'theme_mod',
+                'default' => 'Service 2',
+                'sanitize_callback' => 'sanitize_text_field'
+        ) );
+        $wp_customize->add_control(
+            'set_service_2_title',
+            array(
+                'label' => 'Service 2 Title',
+                'description' => 'Enter title for Service 2',
+                'section' => 'sec_services',
+                'type' => 'text'
+        ) );
+        // Service 2 image upload can be done via widget area
+        $wp_customize->add_setting(
+            'set_service_2_image',
+            array(
+                'type' => 'theme_mod',
+                'sanitize_callback' => 'absint'
+        ) );
+        $wp_customize->add_control( new WP_Customize_Media_Control(
+            $wp_customize,
+            'set_service_2_image',
+            array(
+                'label'      => 'Service 2 Image',
+                'description' => 'Upload image for Service 2',
+                'section'    => 'sec_services',
+                'mime_type'  => 'image',
+            )
+         )
+        );
+        // Service Section paragraph 2
+        $wp_customize->add_setting(
+            'set_services_2_paragraph',
+            array(
+                'type' => 'theme_mod',
+                'default' => 'Add your services on 2 description here.',
+                'sanitize_callback' => 'sanitize_textarea_field'
+        ) );
+        $wp_customize->add_control(
+            'set_services_2_paragraph',
+            array(
+                'label' => 'Service 2 Description',
+                'description' => 'Enter description for Service 2',
+                'section' => 'sec_services',
+                'type' => 'textarea'
+        ) );
+
+
+
+                //==================
+                // Service 3 Title
+                //==================
+
+                
+                $wp_customize->add_setting(
+                    'set_service_3_title',
+                    array(
+                        'type' => 'theme_mod',
+                        'default' => 'Service 3',
+                        'sanitize_callback' => 'sanitize_text_field'
+                ) );    
+                $wp_customize->add_control(
+                    'set_service_3_title',
+                    array(
+                        'label' => 'Service 3 Title',
+                        'description' => 'Enter title for Service 3',
+                        'section' => 'sec_services',
+                        'type' => 'text'
+                ) );
+                // Service 3 image upload can be done via widget area
+                $wp_customize->add_setting(
+                    'set_service_3_image',
+                    array(
+                        'type' => 'theme_mod',
+                        'sanitize_callback' => 'absint'
+                ) );
+                $wp_customize->add_control( new WP_Customize_Media_Control(
+                    $wp_customize,
+                    'set_service_3_image',
+                    array(
+                        'label'      => 'Service 3 Image',
+                        'description' => 'Upload image for Service 3',
+                        'section'    => 'sec_services',
+                        'mime_type'  => 'image',
+                    )
+                )
+                );
+                // Service Section paragraph 3
+                $wp_customize->add_setting(
+                    'set_services_3_paragraph',
+                    array(
+                        'type' => 'theme_mod',
+                        'default' => 'Add your services on 3 description here.',
+                        'sanitize_callback' => 'sanitize_textarea_field'
+                ) );
+                $wp_customize->add_control(
+                    'set_services_3_paragraph',
+                    array(
+                        'label' => 'Service 3 Description',
+                        'description' => 'Enter description for Service 3',
+                        'section' => 'sec_services',
+                        'type' => 'textarea'
+                ) );
+}
+
+if ( function_exists( 'add_action' ) ) {
+    add_action( 'customize_register', 'themeDav_customizer' );
+}
