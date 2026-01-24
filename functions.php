@@ -88,6 +88,51 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
 
     add_action( 'widgets_init', 'themeDev_sidebars');
 
+    // Register Home Testimonials Sidebar
+    add_action('init', function () {
+    register_post_type('testimonial', [
+        'labels' => [
+            'name' => 'Testimonials',
+            'singular_name' => 'Testimonial',
+        ],
+        'public' => true,
+        'menu_icon' => 'dashicons-testimonial',
+        'supports' => ['title', 'editor', 'thumbnail', 'page-attributes'],
+        'show_in_rest' => true,
+    ]);
+});
+// Enqueue Swiper.js and custom testimonial script and styles
+add_action('wp_enqueue_scripts', function () {
+
+    wp_enqueue_style(
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+        [],
+        null
+    );
+
+    wp_enqueue_script(
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+        [],
+        null,
+        true
+    );
+
+    wp_enqueue_script(
+        'theme-testimonials',
+        get_template_directory_uri() . '/js/testimonials.js',
+        ['swiper'],
+        null,
+        true
+    );
+
+    wp_enqueue_style(
+        'theme-testimonials',
+        get_template_directory_uri() . '/css/testimonials.css'
+    );
+});
+
 // // Adding theme support
 // function themeDev_theme_support() {
 //     // Featured image support
