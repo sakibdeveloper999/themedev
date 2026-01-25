@@ -92,6 +92,7 @@
                             </div>
                         </div>
                     </section>
+                    <!-- // Latest Blog Posts -->
                     <section class="home-blog">
                         <h2>Latest Blog Posts</h2>
                         <div class="container">
@@ -119,12 +120,9 @@
                         <?php endif ?>
                         </div>
                     </section>
-                    <section class="testimonials-section">
-                        <h2>Testimonials</h2>
-                        <div class="">
+                    <!-- Testimonials Section -->
                             <?php get_template_part( 'part/section', 'testimonials' ); ?>
-                        </div>
-                    </section>
+
                 </main>
             </div>
         </div>
