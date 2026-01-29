@@ -21,7 +21,7 @@ if ( ! $testimonials->have_posts() ) {
 
 <section class="testimonials-section">
     <div class="container">
-        <h2>Testimonials</h2>
+        <h2><?php _e('Testimonials', 'themedev'); ?></h2>
 
         <div class="swiper testimonials-slider">
             <div class="swiper-wrapper">

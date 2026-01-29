@@ -3,7 +3,7 @@
 <div id="primary">
     <div id="main">
         <div class="container">
-            <h1>Search results for: <?php echo get_search_query(); ?></h1>
+            <h1><?php printf( __('Search results for: %s', 'themedev'), get_search_query() ); ?></h1>
         <?php get_search_form(); ?>
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); 
@@ -15,7 +15,7 @@
                  the_posts_pagination(  );
                 ?>
             <?php else : ?>
-                <p class="no-posts">Nothing yet to be displayed!</p>
+                <p class="no-posts"><?php _e('Nothing yet to be displayed!', 'themedev'); ?></p>
             <?php endif; ?>
 
         </div>

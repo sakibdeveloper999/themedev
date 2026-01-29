@@ -4,22 +4,22 @@ function themeDav_customizer($wp_customize){
     // copyright section
     $wp_customize -> add_section(
         'sec_copyright', array(
-            'title'     => 'Copyright Settings',
-            'description'   => 'Customize copyright information',
+            'title'     => __('Copyright Settings', 'themedev'),
+            'description'   => __('Customize copyright information', 'themedev'),
         )
     );
                 $wp_customize -> add_setting(
                     'set_copyright', array(
                         'type'      => 'theme_mod',
-                        'default' => 'Copyright © 2026 Your Company. All rights reserved.',
+                        'default' => __('Copyright © 2026 Your Company. All rights reserved.', 'themedev'),
                         'sanitize_callback' => 'sanitize_text_field',
                     )
                 );
 
                 $wp_customize -> add_control(
                     'set_copyright', array(
-                        'label' => 'Copyright Information',
-                        'description' => 'Enter your copyright text',
+                        'label' => __('Copyright Information', 'themedev'),
+                        'description' => __('Enter your copyright text', 'themedev'),
                         'section'   => 'sec_copyright',
                         'type'      => 'text',
                     )
@@ -27,22 +27,22 @@ function themeDav_customizer($wp_customize){
         // Hero Section
     $wp_customize -> add_section(
         'sec_hero', array(
-            'title'     => 'Hero Settings',
-            'description'   => 'Customize hero section',
+            'title'     => __('Hero Settings', 'themedev'),
+            'description'   => __('Customize hero section', 'themedev'),
         )
     );
                 // Hero Title setting
                     $wp_customize -> add_setting(
                     'set_hero_title', array(
                         'type'      => 'theme_mod',
-                        'default' => 'Please, add some title',
+                        'default' => __('Please, add some title', 'themedev'),
                         'sanitize_callback' => 'sanitize_text_field',
                     )
                 );
                 $wp_customize -> add_control(
                     'set_hero_title', array(
-                        'label' => 'Hero Title',
-                        'description' => 'Enter your hero title',
+                        'label' => __('Hero Title', 'themedev'),
+                        'description' => __('Enter your hero title', 'themedev'),
                         'section'   => 'sec_hero',
                         'type'      => 'text',
                     )
@@ -52,14 +52,14 @@ function themeDav_customizer($wp_customize){
                     $wp_customize -> add_setting(
                     'set_hero_subtitle', array(
                         'type'      => 'theme_mod',
-                        'default' => 'Please, add some subtitle',
+                        'default' => __('Please, add some subtitle', 'themedev'),
                         'sanitize_callback' => 'sanitize_textarea_field',
                     )
                 );
                 $wp_customize -> add_control(
                     'set_hero_subtitle', array(
-                        'label' => 'Hero Subtitle',
-                        'description' => 'Enter your hero subtitle',
+                        'label' => __('Hero Subtitle', 'themedev'),
+                        'description' => __('Enter your hero subtitle', 'themedev'),
                         'section'   => 'sec_hero',
                         'type'      => 'textarea',
                     )
@@ -68,14 +68,14 @@ function themeDav_customizer($wp_customize){
                     $wp_customize -> add_setting(
                     'set_hero_button_text', array(
                         'type'      => 'theme_mod',
-                        'default' => 'Learn More',
+                        'default' => __('Learn More', 'themedev'),
                         'sanitize_callback' => 'sanitize_text_field',
                     )
                 );
                 $wp_customize -> add_control(
                     'set_hero_button_text', array(
-                        'label' => 'Hero Button Text',
-                        'description' => 'Enter your hero button text',
+                        'label' => __('Hero Button Text', 'themedev'),
+                        'description' => __('Enter your hero button text', 'themedev'),
                         'section'   => 'sec_hero',
                         'type'      => 'text',
                     )
@@ -90,8 +90,8 @@ function themeDav_customizer($wp_customize){
                 );
                 $wp_customize -> add_control(
                     'set_hero_button_link', array(
-                        'label' => 'Hero Button URL',
-                        'description' => 'Enter your hero button link',
+                        'label' => __('Hero Button URL', 'themedev'),
+                        'description' => __('Enter your hero button link', 'themedev'),
                         'section'   => 'sec_hero',
                         'type'      => 'url',
                     )
@@ -106,8 +106,8 @@ function themeDav_customizer($wp_customize){
                 );
                 $wp_customize -> add_control(
                     'set_hero_height', array(
-                        'label' => 'Hero Height',
-                        'description' => 'Enter your hero height (e.g., 800px)',
+                        'label' => __('Hero Height', 'themedev'),
+                        'description' => __('Enter your hero height (e.g., 800px)', 'themedev'),
                         'section'   => 'sec_hero',
                         'type'      => 'number',
                     )
@@ -123,8 +123,8 @@ function themeDav_customizer($wp_customize){
                     $wp_customize,
                     'set_hero_background',
                     array(
-                        'label'      => 'Hero Background Image',
-                        'description' => 'Upload your hero background image',
+                        'label'      => __('Hero Background Image', 'themedev'),
+                        'description' => __('Upload your hero background image', 'themedev'),
                         'section'    => 'sec_hero',
                         'mime_type'  => 'image',
                     )
@@ -135,7 +135,7 @@ function themeDav_customizer($wp_customize){
 	$wp_customize->add_section( 
         'sec_blog', 
         array(
-		    'title' => 'Blog Section'
+		    'title' => __('Blog Section', 'themedev')
 	) );
     
             // Posts per page
@@ -149,8 +149,8 @@ function themeDav_customizer($wp_customize){
             $wp_customize->add_control( 
                 'set_per_page', 
                 array(
-                    'label' => 'Posts per page',
-                    'description' => 'How many items to display in the post list?',			
+                    'label' => __('Posts per page', 'themedev'),
+                    'description' => __('How many items to display in the post list?', 'themedev'),			
                     'section' => 'sec_blog',
                     'type' => 'number'
             ) );
@@ -166,8 +166,8 @@ function themeDav_customizer($wp_customize){
             $wp_customize->add_control( 
                 'set_category_include', 
                 array(
-                    'label' => 'Post categories to include',
-                    'description' => 'Comma separated values or single category ID',
+                    'label' => __('Post categories to include', 'themedev'),
+                    'description' => __('Comma separated values or single category ID', 'themedev'),
                     'section' => 'sec_blog',
                     'type' => 'text'
             ) );	
@@ -183,8 +183,8 @@ function themeDav_customizer($wp_customize){
             $wp_customize->add_control( 
                 'set_category_exclude', 
                 array(
-                    'label' => 'Post categories to exclude',
-                    'description' => 'Comma separated values or single category ID',			
+                    'label' => __('Post categories to exclude', 'themedev'),
+                    'description' => __('Comma separated values or single category ID', 'themedev'),			
                     'section' => 'sec_blog',
                     'type' => 'text'
             ) );
@@ -198,7 +198,7 @@ function themeDav_customizer($wp_customize){
 	$wp_customize->add_section( 
         'sec_services', 
         array(
-		    'title' => 'Services Section'
+		    'title' => __('Services Section', 'themedev')
 	) );
 
                 //==================
@@ -210,14 +210,14 @@ function themeDav_customizer($wp_customize){
                     'set_service_1_title',
                     array(
                         'type' => 'theme_mod',
-                        'default' => 'Service 1',
+                        'default' => __('Service 1', 'themedev'),
                         'sanitize_callback' => 'sanitize_text_field'
                 ) );
                 $wp_customize->add_control(
                     'set_service_1_title',
                     array(
-                        'label' => 'Service 1 Title',
-                        'description' => 'Enter title for Service 1',
+                        'label' => __('Service 1 Title', 'themedev'),
+                        'description' => __('Enter title for Service 1', 'themedev'),
                         'section' => 'sec_services',
                         'type' => 'text'
                 ) );
@@ -232,8 +232,8 @@ function themeDav_customizer($wp_customize){
                     $wp_customize,
                     'set_service_1_image',
                     array(
-                        'label'      => 'Service 1 Image',
-                        'description' => 'Upload image for Service 1',
+                        'label'      => __('Service 1 Image', 'themedev'),
+                        'description' => __('Upload image for Service 1', 'themedev'),
                         'section'    => 'sec_services',
                         'mime_type'  => 'image',
                     )
@@ -244,14 +244,14 @@ function themeDav_customizer($wp_customize){
                     'set_services_1_paragraph',
                     array(
                         'type' => 'theme_mod',
-                        'default' => 'Add your services on 1 description here.',
+                        'default' => __('Add your services on 1 description here.', 'themedev'),
                         'sanitize_callback' => 'sanitize_textarea_field'
                 ) );
                 $wp_customize->add_control(
                     'set_services_1_paragraph',
                     array(
-                        'label' => 'Service 1 Description',
-                        'description' => 'Enter description for Service 1',
+                        'label' => __('Service 1 Description', 'themedev'),
+                        'description' => __('Enter description for Service 1', 'themedev'),
                         'section' => 'sec_services',
                         'type' => 'textarea'
                 ) );
@@ -268,14 +268,14 @@ function themeDav_customizer($wp_customize){
             'set_service_2_title',
             array(
                 'type' => 'theme_mod',
-                'default' => 'Service 2',
+                'default' => __('Service 2', 'themedev'),
                 'sanitize_callback' => 'sanitize_text_field'
         ) );
         $wp_customize->add_control(
             'set_service_2_title',
             array(
-                'label' => 'Service 2 Title',
-                'description' => 'Enter title for Service 2',
+                'label' => __('Service 2 Title', 'themedev'),
+                'description' => __('Enter title for Service 2', 'themedev'),
                 'section' => 'sec_services',
                 'type' => 'text'
         ) );
@@ -290,8 +290,8 @@ function themeDav_customizer($wp_customize){
             $wp_customize,
             'set_service_2_image',
             array(
-                'label'      => 'Service 2 Image',
-                'description' => 'Upload image for Service 2',
+                'label'      => __('Service 2 Image', 'themedev'),
+                'description' => __('Upload image for Service 2', 'themedev'),
                 'section'    => 'sec_services',
                 'mime_type'  => 'image',
             )
@@ -302,14 +302,14 @@ function themeDav_customizer($wp_customize){
             'set_services_2_paragraph',
             array(
                 'type' => 'theme_mod',
-                'default' => 'Add your services on 2 description here.',
+                'default' => __('Add your services on 2 description here.', 'themedev'),
                 'sanitize_callback' => 'sanitize_textarea_field'
         ) );
         $wp_customize->add_control(
             'set_services_2_paragraph',
             array(
-                'label' => 'Service 2 Description',
-                'description' => 'Enter description for Service 2',
+                'label' => __('Service 2 Description', 'themedev'),
+                'description' => __('Enter description for Service 2', 'themedev'),
                 'section' => 'sec_services',
                 'type' => 'textarea'
         ) );
@@ -325,14 +325,14 @@ function themeDav_customizer($wp_customize){
                     'set_service_3_title',
                     array(
                         'type' => 'theme_mod',
-                        'default' => 'Service 3',
+                        'default' => __('Service 3', 'themedev'),
                         'sanitize_callback' => 'sanitize_text_field'
                 ) );    
                 $wp_customize->add_control(
                     'set_service_3_title',
                     array(
-                        'label' => 'Service 3 Title',
-                        'description' => 'Enter title for Service 3',
+                        'label' => __('Service 3 Title', 'themedev'),
+                        'description' => __('Enter title for Service 3', 'themedev'),
                         'section' => 'sec_services',
                         'type' => 'text'
                 ) );
@@ -347,8 +347,8 @@ function themeDav_customizer($wp_customize){
                     $wp_customize,
                     'set_service_3_image',
                     array(
-                        'label'      => 'Service 3 Image',
-                        'description' => 'Upload image for Service 3',
+                        'label'      => __('Service 3 Image', 'themedev'),
+                        'description' => __('Upload image for Service 3', 'themedev'),
                         'section'    => 'sec_services',
                         'mime_type'  => 'image',
                     )
@@ -359,14 +359,14 @@ function themeDav_customizer($wp_customize){
                     'set_services_3_paragraph',
                     array(
                         'type' => 'theme_mod',
-                        'default' => 'Add your services on 3 description here.',
+                        'default' => __('Add your services on 3 description here.', 'themedev'),
                         'sanitize_callback' => 'sanitize_textarea_field'
                 ) );
                 $wp_customize->add_control(
                     'set_services_3_paragraph',
                     array(
-                        'label' => 'Service 3 Description',
-                        'description' => 'Enter description for Service 3',
+                        'label' => __('Service 3 Description', 'themedev'),
+                        'description' => __('Enter description for Service 3', 'themedev'),
                         'section' => 'sec_services',
                         'type' => 'textarea'
                 ) );

@@ -1,7 +1,7 @@
 <footer class="site-footer">
             <div class="container">
                 <div class="copyright">
-                <p><?php echo get_theme_mod('set_copyright','Copyright © 2026 Your Company. All rights reserved.'); ?></p>
+                <p><?php echo get_theme_mod('set_copyright', __('Copyright © 2026 Your Company. All rights reserved.', 'themedev')); ?></p>
                 </div>
                 <nav class="footer-menu">
                     <?php 

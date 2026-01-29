@@ -29,15 +29,15 @@
                         <!--  Pagination -->
                         <div class="wpdevs-pagination">
                          <div class="pages new">
-                           <?php previous_posts_link('<< Newer posts'); ?>
+                           <?php previous_posts_link(__('<< Newer posts', 'themedev')); ?>
                          </div>
                          <div class="pages old">
-                          <?php next_posts_link('Older posts >>'); ?>
+                          <?php next_posts_link(__('Older posts >>', 'themedev')); ?>
                           </div>
                         </div>
                         <!--  Pagination -->
                         <?php else: ?> 
-                         <p>Nothing yet to be displayed!</p>
+                         <p><?php _e('Nothing yet to be displayed!', 'themedev'); ?></p>
                         <?php endif ?>
                             </div>
                             <?php get_sidebar() ?>

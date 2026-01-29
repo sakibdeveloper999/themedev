@@ -47,7 +47,7 @@
                           $service_2_paragraph = get_theme_mod( 'set_service_2_paragraph', 'Please, add some paragraph' );
                           $service_3_paragraph = get_theme_mod( 'set_service_3_paragraph', 'Please, add some paragraph' );
                          ?>
-                         <h2 class="services-title">Services</h2>
+                         <h2 class="services-title"><?php _e('Services', 'themedev'); ?></h2>
                          <div class="services-divider"></div>
                           <div class="container services-customizer">
                               <div class="services-items">
@@ -67,7 +67,7 @@
                               </div>
                       </section>
                     <section class="services">
-                        <h2>Services</h2>
+                        <h2><?php _e('Services', 'themedev'); ?></h2>
                         <div class="container">
                             <div class="services-item">
                                 <?php 
@@ -94,7 +94,7 @@
                     </section>
                     <!-- // Latest Blog Posts -->
                     <section class="home-blog">
-                        <h2>Latest Blog Posts</h2>
+                        <h2><?php _e('Latest Blog Posts', 'themedev'); ?></h2>
                         <div class="container">
                           <?php 
                           $per_page= get_theme_mod( 'set_per_page', 3 );
@@ -116,7 +116,7 @@
                            endwhile;
                         wp_reset_postdata(  );
                          else: ?> 
-                         <p>Nothing yet to be displayed!</p>
+                         <p><?php _e('Nothing yet to be displayed!', 'themedev'); ?></p>
                         <?php endif ?>
                         </div>
                     </section>

@@ -17,12 +17,15 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
 
         // Theme Configuration
     function themeDev_config(){
+        //TExt Domain for Translations
+        $textdomain = 'themedev';
+        load_theme_textdomain( $textdomain, get_template_directory() . '/languages' );
         // Register Navigation Menu
         register_nav_menus(
          array(
-        'themeDav-main-menu'=> 'Main Menu',
-        'themeDav-footer-menu'=> 'Footer Menu',
-        'themeDav-social-menu'=> 'Social Menu',
+        'themeDev-main-menu'=> __('Main Menu', 'themedev'),
+        'themeDev-footer-menu'=> __('Footer Menu', 'themedev'),
+        'themeDev-social-menu'=> __('Social Menu', 'themedev'),
        )
         );
         // Adding theme supports for custom header.
@@ -48,9 +51,9 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
     function themeDev_sidebars(){
         // Blog Sidebar
         register_sidebar( array(
-            'name'          => 'Blog Sidebar',
+            'name'          => __('Blog Sidebar', 'themedev'),
             'id'            => 'sidebar-blog',
-            'description'   => 'This is the Blog Sidebar. You can add your widgets here.',
+            'description'   => __('This is the Blog Sidebar. You can add your widgets here.', 'themedev'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="widget-title">',
@@ -58,27 +61,27 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
         ) );
         
         register_sidebar( array(
-            'name'          => 'Service 1',
+            'name'          => __('Service 1', 'themedev'),
             'id'            => 'service-1',
-            'description'   => 'This is the First Service Area.',
+            'description'   => __('This is the First Service Area.', 'themedev'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="widget-title">',
             'after_title'   => '</h2>',
         ) );
         register_sidebar( array(
-            'name'          => 'Service 2',
+            'name'          => __('Service 2', 'themedev'),
             'id'            => 'service-2',
-            'description'   => 'This is the 2nd Service Area.',
+            'description'   => __('This is the 2nd Service Area.', 'themedev'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="widget-title">',
             'after_title'   => '</h2>',
         ) );
         register_sidebar( array(
-            'name'          => 'Service 3',
+            'name'          => __('Service 3', 'themedev'),
             'id'            => 'service-3',
-            'description'   => 'This is the 3th Service Area.',
+            'description'   => __('This is the 3th Service Area.', 'themedev'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="widget-title">',
@@ -92,8 +95,8 @@ add_action( 'wp_enqueue_scripts', 'themeDev_enqueueing' );
     add_action('init', function () {
     register_post_type('testimonial', [
         'labels' => [
-            'name' => 'Testimonials',
-            'singular_name' => 'Testimonial',
+            'name' => __('Testimonials', 'themedev'),
+            'singular_name' => __('Testimonial', 'themedev'),
         ],
         'public' => true,
         'menu_icon' => 'dashicons-testimonial',
