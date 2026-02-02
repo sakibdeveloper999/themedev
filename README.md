@@ -22,23 +22,7 @@
 
 ## 👨‍💻 About Me
 
-javascript
-const sakib = {
-    pronouns: "he" | "him",
-    location: "Bangladesh 🇧🇩",
-    role: "Full-Stack Web Developer",
-    specialization: ["WordPress Development", "MERN Stack", "Custom Solutions"],
-    
-    achievements: {
-        apiOptimization: "40% load reduction",
-        uiPerformance: "30% faster page loads",
-        codeQuality: "Clean, maintainable standards",
-        clientReach: ["Local", "International Markets"]
-    },
-    
-    currentlyBuilding: "Real-time applications & enterprise systems",
-    philosophy: "Code with purpose, design with creativity"
-};
+
 <img align="right" alt="Coding Animation" width="320" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif">
 🎯 Quick Highlights
 🔥 WordPress Expert with custom theme/plugin development
