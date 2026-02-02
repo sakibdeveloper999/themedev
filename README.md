@@ -22,7 +22,7 @@
 
 ## 👨‍💻 About Me
 
-```javascript
+javascript
 const sakib = {
     pronouns: "he" | "him",
     location: "Bangladesh 🇧🇩",
